@@ -1,0 +1,6 @@
+{
+  "name": "Lernexa Platform",
+  "description": "Learn with Directions - The modern career-acceleration landing page and interactive simulation portal for banking certifications.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

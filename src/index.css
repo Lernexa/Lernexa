@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", system-ui, -apple-system, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, monospace;
+}
+
+:root {
+  --bds-purple-400: #8C50B9;
+  --bds-purple-500: #7A3FAA;
+  --bds-orange-400: #CB9569;
+  --bds-bg: #FAFAF8;
+  --bds-surface: #FFFFFF;
+  --bds-text: #1A1816;
+  --bds-text-muted: #6E6B63;
+  --bds-border: #E5E3DD;
+}
+
+.dark {
+  --bds-bg: #141211;
+  --bds-surface: #1E1C1A;
+  --bds-text: #FAFAF8;
+  --bds-text-muted: #9B9890;
+  --bds-border: #33312C;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bds-bg);
+  color: var(--bds-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Background soft ambient glow from Clean Minimalism Spec */
+.accent-glow {
+  background: radial-gradient(circle at top right, rgba(140, 80, 185, 0.04) 0%, transparent 50%),
+              radial-gradient(circle at bottom left, rgba(203, 149, 105, 0.02) 0%, transparent 40%);
+}
+
+/* Bento card preset matching Clean Minimalism */
+.bento-card {
+  background: var(--bds-surface);
+  border: 1px solid var(--bds-border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.bento-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -10px rgba(140, 80, 185, 0.06);
+}
+
+/* Base Pill tag styled strictly as Clean Minimalism */
+.tag-minimal {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--bds-orange-400);
+  border: 1px solid var(--bds-orange-400);
+  padding: 3px 10px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(140, 80, 185, 0.15);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(140, 80, 185, 0.3);
+}
+
